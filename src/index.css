@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-ivory: #FAF7F2;
+    --color-ivory-light: #FFFEFA;
+    --color-gold: #C5A059;
+    --color-gold-dark: #8F6B27;
+    --color-gold-light: #DFC07A;
+    --color-maroon: #5E1218;
+    --color-maroon-dark: #3F0B10;
+    --color-charcoal: #231C16;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #FAF7F2;
+    color: #231C16;
+  }
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+.font-cormorant {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-hindi {
+  font-family: 'Tiro Devanagari Hindi', 'Rozha One', 'Mangal', serif;
+}
+
+/* Luxury Indian Gold Foil Effect */
+.gold-shimmer {
+  background: linear-gradient(
+    110deg,
+    #936E27 0%,
+    #C5A059 25%,
+    #FDEAB2 45%,
+    #C5A059 65%,
+    #886422 100%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: goldShimmer 6s linear infinite;
+}
+
+@keyframes goldShimmer {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Subtle parchment paper grain texture */
+.bg-parchment {
+  background-color: #FAF7F2;
+  background-image: radial-gradient(#C5A059 0.4px, transparent 0.4px), radial-gradient(#5E1218 0.4px, #FAF7F2 0.4px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+  background-color: #FAF7F2;
+}
+
+/* Luxury ornamental border frame */
+.royal-border {
+  border: 1px solid rgba(197, 160, 89, 0.45);
+  box-shadow: 0 0 0 4px #FAF7F2, 0 0 0 5px rgba(197, 160, 89, 0.25);
+}
+
+.royal-box-shadow {
+  box-shadow: 0 20px 40px -15px rgba(94, 18, 24, 0.08), 0 0 1px 1px rgba(197, 160, 89, 0.3);
+}
+
+/* Floating animation for subtle flower petals and ornamental icons */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+}
+
+.animate-float-gentle {
+  animation: floatGentle 5s ease-in-out infinite;
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 40s linear infinite;
+}
